@@ -1,0 +1,122 @@
+﻿<div class="row">
+    <div class="col-sm-6">
+
+    </div>
+    <div class="col-sm-6" id="divRegIPri">
+        <br />
+        <button type="button" style="float:right; border: 2px solid black;" class="btn btn-default" id="pri">Prijava</button>
+        <button type="button" style="float: right;background-color:yellow; border: 2px solid black;" class="btn btn-default" id="reg">Registracija</button>
+
+    </div>
+</div>
+<div class="row">
+    <div style="text-align:center; display:none" id="registracijaDiv">
+        <form method="post" action="post/" id="registracijaForm">
+            <h3>Registracija korisnika</h3>
+            <br />
+            <p><label>E-mail adresa: </label><input type="text" id="userReg" /></p>
+            <p><label>Lozinka: </label><input type="password" id="lozReg" /></p>
+            <p><label>Potvrda lozinke: </label><input type="password" id="lezReg2" /></p>
+            <p>
+                <button type="button" style="background-color:yellow; border: 2px solid black;" class="btn btn-default" id="odustajanje">Odustajanje</button>
+                <button type="submit" class="btn btn-default" style="border: 2px solid black;"> Registracija</button>
+            </p>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div style="text-align:center; display:none" id="prijavaDiv">
+        <form method="post" action="post/" id="prijavaForm">
+            <h3>Prijava korisnika</h3>
+            <br />
+            <p><label>E-mail adresa: </label><input type="text" id="userPri" /></p>
+            <p><label>Lozinka: </label><input type="password" id="lozPri" /></p>
+            <p>
+                <button type="button" style="background-color:yellow; border: 2px solid black;" class="btn btn-default" id="odustajanje1">Odustajanje</button>
+                <button type="submit" class="btn btn-default" style="border: 2px solid black;"> Prijava</button>
+            </p>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div style="text-align:center; display:none" id="uspesnaReg">
+        <br />
+        <h2>Uspesna registracija na sistem</h2>
+        <button type="button" class="btn btn-default" id="prijavaIzReg" style="border: 2px solid black;">Prijava na sistem</button>
+
+    </div>
+
+</div>
+<div class="row" style="display:none" id="divInfo">
+    <div class="col-sm-6">
+        <br />
+        <br />
+        <p id="info"></p>
+
+
+    </div>
+    <div class="col-sm-6">
+        <br />
+        <br />
+        <button style=" float: right; background-color: yellow; border: 2px solid black;" class="btn btn-default" id="odjava">Odjava</button>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-sm-6" style="text-align:center; display:none" id="pretragaDiv">
+
+        <form method="post" action="post/" id="pretragaForm">
+            <br />
+            <h3>Pretraga po kapacitetu:</h3>
+            <br />
+            <p><label>Najmanje soba: </label><input type="number"  id="najmanje" /></p>
+            <p><label>Najvise soba: </label><input type="number"  id="najvise" /></p>
+            <p> <button type="submit" class="btn btn-default" style="border: 2px solid black;">Pretraga</button></p>
+        </form>
+    </div>
+    <div class="col-sm-6" style="text-align:left; display:none" id="tradicija">
+        <br />
+        <p><h3>Hotelski lanci sa najduzom tradicijom:</h3></p>
+        <p ><ol id="lanci"></ol></p>
+        <div  style="text-align:center">
+        <p><button type="button" class="btn btn-default" id="ucitavanjeTradicije" style="border: 2px solid black;">Ucitavanje</button></p>
+        </div>
+
+    </div>
+</div>
+
+<div class="row">
+    <div style="text-align:center">
+        <h2>Hoteli</h2>
+        <br />
+    </div>
+</div>
+<div class="row">
+    <div style="text-align:center" id="dataHotel">
+
+    </div>
+</div>
+
+<div class="row">
+    <div style="text-align:center;  display:none" id="dodavanjeHotela">
+        <form method="post" action="post/" id="dodavanjeForm">
+
+            <br />
+            <h2>Dodavanje novog hotela</h2>
+            <p><label>Lanac: </label><select id="lanacHotel"></select> </p>
+            <p><label>Naziv: </label><input type="text" id="naziv" /> </p>
+            <p><label style="width: 215px">Godina otvaranja: </label><input style="width: 80px" type="number" id="otvaranje" /> </p>
+            <p><label style="width: 215px">Broj soba: </label><input style="width: 80px" type="number"  id="sobe" /> </p>
+            <p><label style="width: 215px">Broj zaposlenih: </label><input style="width: 80px" type="number"  id="zaposleni" /> </p>
+            <p>
+                <button type="button" class="btn btn-default" style="background-color:yellow; border: 2px solid black;" id="odustajanje3">Odustajanje</button>
+                <button type="submit" class="btn btn-default" style="border: 2px solid black;">Dodavanje</button>
+            </p>
+        </form>
+    </div>
+</div>
+
+@section Scripts{
+    @Scripts.Render("~/Scripts/Skripta.js");
+    <link type="text/css" href="~/Content/Site.css" />
+}
